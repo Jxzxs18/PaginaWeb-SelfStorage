@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <header class="header-aa">
+
+        <div class="menu container">
+
+            <a href="Informacion.html" class="logo">
+                <img src="images/logo.png" alt="logo">
+            </a>
+            <input type="checkbox" id="menu" />
+            <label for="menu"> 
+                <img src="images/menu.png" class="menu-icono" alt="">
+            </label>
+            <nav class="bar">
+                <ul>
+                    <li><a href="Admin.html">Antes de cambiar, entiende y mejora los resultados</a></li>
+                    <li class="dropdown-admin">
+                        <a href="#" class="btn-login" onclick="toggleMenu(event)">
+                         <i class="fas fa-user"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="accionesA.html"><ion-icon name="book-outline"></ion-icon>&nbsp;Gestionar Contratos</a></li>
+                            <li><a href="accionesA.html#admin-pagos"><ion-icon name="journal-outline"></ion-icon>&nbsp;Pagos de Clientes</a></li>
+                            <li><a href="accionesA.html#admin-reportes"><ion-icon name="folder-open-outline"></ion-icon>&nbsp;Reportes Generales</a></li>
+                            <li><a href="accionesA.html#admin-espacios"><ion-icon name="home-outline"></ion-icon>&nbsp;Gestionar Disponibilidad</a></li>
+                            <li><a href="index.html"><ion-icon name="exit-outline"></ion-icon>&nbsp;Cerrar Sesión</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+
+    </header>
+
+    <main class="admin-main">
+    <section id="admin-contratos" class="admin-section">
+      <h2><ion-icon name="albums-outline"></ion-icon>&nbsp;Gestionar Contratos</h2>
+      <p>Administra los contratos activos de todos los clientes.</p>
+      <table class="admin-table">
+        <thead>
+          <tr><th>Cliente</th><th>Espacio</th><th>Inicio</th><th>Fin</th><th>Acción</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Adriana Pérez</td><td>A1</td><td>2025-05-26</td><td>2025-06-26</td><td><button class="btn-1">Finalizar</button></td></tr>
+          <tr><td>Adriana Pérez</td><td>B2</td><td>2025-01-15</td><td>2026-01-15</td><td><button class="btn-1">Finalizar</button></td></tr>
+          <tr><td>Adriana Pérez</td><td>C3</td><td>2023-11-05</td><td>2024-11-05</td><td><button class="btn-1">Finalizar</button></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="admin-pagos" class="admin-section">
+      <h2><ion-icon name="card-outline"></ion-icon>&nbsp;Pagos de Clientes</h2>
+      <p>Consulta y administra los pagos realizados.</p>
+       <div class="pagos-contenedor">
+         <div class="pagos-columna">
+            <h3>Pendientes por Pagar</h3>
+                <ul class="admin-lista">
+                 <li><ion-icon name="close-circle-outline"></ion-icon>&nbsp;Juan López - $1500 MXN - Pendiente</li>
+                 <li><ion-icon name="close-circle-outline"></ion-icon>&nbsp;Alonso Martinez - $500 MXN - Pendiente</li>
+                </ul>
+         </div>
+
+        <div class="pagos-columna">
+            <h3>Pagos Realizados</h3>
+            <ul class="admin-lista">
+                <li><ion-icon name="checkmark-circle-outline"></ion-icon>&nbsp;Adriana Pérez - $500 MXN - Pagado 2025-05-26</li>
+                <li><ion-icon name="checkmark-circle-outline"></ion-icon>&nbsp;Adriana Pérez - $1500 MXN - Pagado 2025-01-15</li>
+                <li><ion-icon name="checkmark-circle-outline"></ion-icon>&nbsp;Adriana Pérez - $1500 MXN - Pagado 2023-11-05</li>
+            </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="admin-reportes" class="admin-section">
+        <h2><ion-icon name="browsers-outline"></ion-icon>&nbsp;Reportes Generales</h2>
+        <p>Genera reportes administrativos para análisis.</p>
+
+        <div class="estadisticas-reporte">
+            <p>📅 Hoy se firmaron <b>3 contratos</b></p>
+            <p>💳 Ingresos del mes: <b>$10,000 MXN</b></p>
+            <p>📦 Espacios disponibles: <b>10</b></p>
+        </div>
+
+        <div class="filtro-fechas">
+            <label>Desde: <input type="date"></label>
+            <label>Hasta: <input type="date"></label>
+            <button class="btn-1" onclick="generarReportePorFechas()">Generar Reporte</button>
+        </div>
+
+        <div style="text-align: center; margin-top: 1rem;">
+            <button class="btn-1" onclick="generarReporte('diario')">Reporte Diario</button>
+            <button class="btn-1" onclick="generarReporte('mensual')">Reporte Mensual</button>
+            <button class="btn-1" onclick="generarReporte('contratos')">Reporte de Contratos</button>
+            <button class="btn-1" onclick="generarReporte('pagos')">Reporte de Pagos</button>
+            <button class="btn-1" onclick="generarReporte('espacios')">Reporte de Espacios</button>
+        </div>
+
+        <div style="text-align: center; margin-top: 1rem;">
+            <button class="btn-1" onclick="exportarReporte('pdf')">Exportar PDF</button>
+            <button class="btn-1" onclick="exportarReporte('excel')">Exportar Excel</button>
+        </div>
+
+        <div style="margin-top: 2rem;">
+            <h3 style="text-align: center;"><ion-icon name="albums-outline"></ion-icon>&nbsp;Reportes Recientes</h3><br>
+            <ul class="admin-lista">
+            <li><ion-icon name="document-outline"></ion-icon>&nbsp;Reporte mensual - Mayo 2025</li>
+            <li><ion-icon name="document-outline"></ion-icon>&nbsp;Reporte diario - 24/06/2025</li>
+            <li><ion-icon name="document-outline"></ion-icon>&nbsp;Reporte de contratos - 15/06/2025</li>
+            </ul>
+        </div>
+        </section>
+
+        <section id="admin-espacios" class="admin-section">
+        <h2><ion-icon name="home-outline"></ion-icon>&nbsp;Gestionar Disponibilidad de Almacenes</h2><br>
+         <div class="products container" id="Almacen">
+            <div class="products-content">
+                <div class="product">
+                    <img src="images/bodegas2.jpg" alt="">
+                    <div class="product-txt">
+                        <h3>Almacen Basico al Aire Libre <br> (2m) </h3>
+                        <p>
+                           <b><span class="disponible">3</span> en Disponibilidad.</b>
+                        </p>
+                    <div class="btn-controles">
+                        <button onclick="cambiarDisponibilidad(this, -1)">-</button>
+                        <button onclick="cambiarDisponibilidad(this, 1)">+</button>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <img src="images/bodegas1.jpg" alt="">
+                    <div class="product-txt">
+                        <h3>Almacen Basico al Aire Libre <br> (4m) </h3>
+                        <p>
+                            <b><span class="disponible">2</span> en Disponibilidad.</b>
+                        </p>
+                     <div class="btn-controles">
+                        <button onclick="cambiarDisponibilidad(this, -1)">-</button>
+                        <button onclick="cambiarDisponibilidad(this, 1)">+</button>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <img src="images/bodegas3.jpeg" alt="">
+                    <div class="product-txt">
+                        <h3>Almacen Basico en Interior <br> (5m) </h3>
+                        <p>
+                            <b><span class="disponible">0</span> en Disponibilidad.</b>
+                        </p>
+                    <div class="btn-controles">
+                        <button onclick="cambiarDisponibilidad(this, -1)">-</button>
+                        <button onclick="cambiarDisponibilidad(this, 1)">+</button>
+                    </div> 
+                    </div>
+                </div>
+
+                <div class="product" id="Escencial">
+                    <img src="images/bodegas4.webp" alt="">
+                    <div class="product-txt">
+                        <h3>Almacen Escencial en Interior <br> •Sensores de Temperatura (5m)</h3>
+                        <p>
+                            <b><span class="disponible">4</span> en Disponibilidad.</b>
+                        </p>
+                     <div class="btn-controles">
+                        <button onclick="cambiarDisponibilidad(this, -1)">-</button>
+                        <button onclick="cambiarDisponibilidad(this, 1)">+</button>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <img src="images/bodegas5.jpg" alt="">
+                    <div class="product-txt">
+                        <h3>Almacen Escencial en Interior <br> •Cerrojo Digital (5m)</h3>
+                        <p>
+                            <b><span class="disponible">0</span> en Disponibilidad.</b>
+                        </p>
+                    <div class="btn-controles">
+                        <button onclick="cambiarDisponibilidad(this, -1)">-</button>
+                        <button onclick="cambiarDisponibilidad(this, 1)">+</button>
+                    </div>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <img src="images/bodegas6.avif" alt="">
+                    <div class="product-txt">
+                        <h3>Almacen Escencial en Exterior <br> (10m)</h3>
+                        <p>
+                             <b><span class="disponible">1</span> en Disponibilidad.</b>
+                        </p>
+                     <div class="btn-controles">
+                        <button onclick="cambiarDisponibilidad(this, -1)">-</button>
+                        <button onclick="cambiarDisponibilidad(this, 1)">+</button>
+                    </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+  </main>
+
+
+
+
+  <script src="script.js"></script> 
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

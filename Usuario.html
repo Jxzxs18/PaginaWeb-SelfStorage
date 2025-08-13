@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="header-u">
+
+        <div class="menu container">
+
+            <a href="Informacion.html" class="logo">
+                <img src="images/logo.png" alt="logo">
+            </a>
+            <input type="checkbox" id="menu" />
+            <label for="menu"> 
+                <img src="images/menu.png" class="menu-icono" alt="">
+            </label>
+            <nav class="barra">
+                <ul>
+                    <li><a href="#">Descubrenos!</a></li>
+                    <li class="dropdown-usu">
+                        <a href="#" class="btn-usuario" onclick="toggleMenu(event)">
+                         <i class="fas fa-user"></i>
+                        </a>
+                        <ul class="dropdown-me">
+                            <li><a href="accionesU.html"><ion-icon name="book-outline"></ion-icon>&nbsp;Gestionar Contratos</a></li>
+                            <li><a href="accionesU.html#gestionar-pagos"><ion-icon name="journal-outline"></ion-icon>&nbsp;Gestión de Pagos</a></li>
+                            <li><a href="accionesU.html#nuevo-contrato"><ion-icon name="duplicate-outline"></ion-icon>&nbsp;Nuevo Contrato</a></li>
+                            <li><a href="accionesU.html#espacios-disponibles"><ion-icon name="home-outline"></ion-icon>&nbsp;Ver Espacios Disponibles</a></li>
+                            <li><a href="index.html"><ion-icon name="exit-outline"></ion-icon>&nbsp;Cerrar Sesión</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+
+        <div class="header-content container">
+            <div class="header-txt-u">
+                <h1>¡Hola, Adriana!</h1>
+                <p>
+                    Bienvenida a tu espacio de almacenamiento. Aqui puedes revisar tus pagos, contratos y detalles de tu renta. Si necesitas
+                    asistencia, estamos aqui para ayudarte.<br><span>¡Gracias por confiar en nosotros!</span>
+                </p>
+                <div class="contenedor-corazon">
+                <button class="heart-button" onclick="palpitarCorazon(event)">💙</button>
+                <div id="heartContainer"></div>
+                </div>
+            </div>
+
+            <div class="header-img-u">
+                <img src="images/usuario.jpg" alt="imagen derecha">
+            </div>
+        </div>
+
+    </header>
+
+    <!--Información para Usuario-->
+        <section class="hero-section-blue">
+    <div class="hero-content-box">
+        <h1 class="hero-title">SELF STORAGE - Panel del Usuario</h1>
+        <p class="hero-subtitle">Consulta y administra tus servicios de forma fácil y segura.</p>
+        <div class="hero-buttons">
+        <button class="hero-btn primary">Nuevo Contrato</button>
+        <button class="hero-btn secondary">Espacios Disponibles</button>
+        </div>
+    </div>
+    </section>
+
+    <section class="icons-section-grid">
+    <div class="icons-grid-wrapper">
+        <div class="icon-box"><ion-icon name="reader-outline"></ion-icon><p>Ver mis Contratos Activos</p></div>
+        <div class="icon-box"><ion-icon name="medkit-outline"></ion-icon><p>Crear nuevo contrato</p></div>
+        <div class="icon-box"><ion-icon name="cash-outline"></ion-icon><p>Realizar Pago</p></div>
+        <div class="icon-box"><ion-icon name="card-outline"></ion-icon><p>Consultar historial de Pagos</p></div>
+        <div class="icon-box"><ion-icon name="newspaper-outline"></ion-icon><p>Mis Facturas</p></div>
+        <div class="icon-box"><ion-icon name="home-outline"></ion-icon><p>Espacios Disponibles</p></div>
+        <div class="icon-box"><ion-icon name="document-outline"></ion-icon><p>Estado de Cuenta</p></div>
+        <div class="icon-box"><ion-icon name="checkmark-done-outline"></ion-icon><p>Avisos</p></div>
+        <div class="icon-box"><ion-icon name="alert-circle-outline"></ion-icon><p>Notificaciones</p></div>
+        <div class="icon-box"><ion-icon name="person-outline"></ion-icon><p>Consultar Mi Perfil</p></div>
+    </div>
+    </section>
+
+    <section class="intro-text-block">
+    <h2 class="intro-title">¡Bienvenido!</h2>
+    <p class="intro-paragraph">Bienvenido a tu área de cliente. Desde aquí puedes administrar tus contratos, 
+        realizar pagos, consultar la disponibilidad de espacios y estar al tanto de tus servicios de almacenamiento de forma 
+        rápida y segura.</p>
+    </section>
+
+    <section class="features-section-cards">
+    <div class="features-cards-wrapper">
+        <div class="feature-card">
+        <h3 class="feature-title">Seguridad Garantizada</h3>
+        <p class="feature-desc">Tus pertenencias están protegidas con vigilancia 24/7.</p>
+        </div>
+        <div class="feature-card">
+        <h3 class="feature-title">Flexibilad de Tiempos</h3>
+        <p class="feature-desc">Renta mensual, semestral o anual según lo necesites.</p>
+        </div>
+        <div class="feature-card">
+        <h3 class="feature-title">Gestión en Línea</h3>
+        <p class="feature-desc">Haz todo desde tu dispositivo, sin filas ni llamadas.</p>
+        </div>
+        <div class="feature-card">
+        <h3 class="feature-title">Mantenimiento Incluido</h3>
+        <p class="feature-desc">Instalaciones limpiar y listas para usarse.</p>
+        </div>
+    </div>
+    </section>
+
+    <section class="aboutus-section-style">
+    <div class="aboutus-text-area">
+        <h2 class="aboutus-heading">ACERCA DE NOSOTROS</h2>
+        <p class="aboutus-paragraph">
+          En Self Storage trabajamos para ofrecerte una experiencia práctica y segura para el resguardo de tus pertenencias. 
+          Nuestras instalaciones están diseñadas para adaptarse a tus necesidades. ¡Gracias por confiar en nosotros!
+        </p>
+    </div>
+    <div class="aboutus-image-area"> <!--Poner Imagen-->
+        <img src="images/acerkd.jpg" alt="Laptop Graphic" class="aboutus-image">
+    </div>
+    </section>
+  
+
+
+
+        <footer class="footer">
+            <div class="footer-content container">
+                <div class="link">
+                    <h3>Redes Sociales</h3>
+                    <ul>
+                        <li><a href="https://www.facebook.com/selfstorageslp/">Facebook</a></li>
+                        <li><a href="https://www.instagram.com/access_self_storage/">Instagram</a></li>
+                        <li><a href="https://www.linkedin.com/company/u-storage-m-xico/">Linkedin</a></li>
+                        <li><a href="https://www.tiktok.com/discover/self-storage?lang=es">Tiktok</a></li>
+                    </ul>
+                </div>
+                <div class="link">
+                    <h3>Links de Interés</h3>
+                    <ul>
+                        <li><a href="https://www.google.com.mx/maps/">Buscar por Ubicación</a></li>
+                        <li><a href="https://u-storage.com.mx/formatos/Entrevista_de_Entrada_U-Storage_2025.pdf">Requisitos de Contratación</a></li>
+                        <li><a href="Informacion.html">Protocolos de Seguridad</a></li>
+                        <li><a href="#contactos">Ayuda</a></li>
+                    </ul>
+                </div>
+                <div class="link">
+                    <h3>Contactanos</h3>
+                    <ul>
+                        <li><a href="#">800 966 0001</a></li>
+                        <li><a href="#">Selfstorage@almacen.com</a></li>
+                        <li><a href="https://www.google.com.mx/maps/search/U-Storage/@19.4025289,-99.0769532,13z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MDUwNy4wIKXMDSoASAFQAw%3D%3D">Sucursales</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div>
+                <br>
+                  <p>&copy; 2025 Self Storage. Todos los derechos reservados.</p>
+                  <p>Ubicación: Ciudad de México </p>
+            </div>
+        </footer>
+
+
+     <script src="script.js"></script> 
+     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

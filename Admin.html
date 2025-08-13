@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="header-a">
+
+        <div class="menu container">
+
+            <a href="Informacion.html" class="logo">
+                <img src="images/logo.png" alt="logo">
+            </a>
+            <input type="checkbox" id="menu" />
+            <label for="menu"> 
+                <img src="images/menu.png" class="menu-icono" alt="">
+            </label>
+            <nav class="bar">
+                <ul>
+                    <li><a href="Admin.html#Conoce">Gestiona tus Operaciones</a></li>
+                    <li class="dropdown-admin">
+                        <a href="#" class="btn-login" onclick="toggleMenu(event)">
+                         <i class="fas fa-user"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="accionesA.html#admin-contratos"><ion-icon name="book-outline"></ion-icon>&nbsp;Gestionar Contratos</a></li>
+                            <li><a href="accionesA.html#admin-pagos"><ion-icon name="journal-outline"></ion-icon>&nbsp;Pagos de Clientes</a></li>
+                            <li><a href="accionesA.html#admin-reportes"><ion-icon name="folder-open-outline"></ion-icon>&nbsp;Reportes Generales</a></li>
+                            <li><a href="accionesA.html#admin-espacios"><ion-icon name="home-outline"></ion-icon>&nbsp;Gestionar Disponibilidad</a></li>
+                            <li><a href="index.html"><ion-icon name="exit-outline"></ion-icon>&nbsp;Cerrar Sesión</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+
+        <div class="header-content container">
+            <div class="header-txt-a">
+                <h1>Bienvenido de Nuevo, <span>Pedro</span></h1>
+                <p>
+                    Tienes el control de la plataforma. Gestiona rentas, pagos y contratos con facilidad.
+                    Revisa los reportes y asegurate de que todo funcione sin problemas.<br><span>¡Gracias por tu compromiso!</span>
+                </p>
+                <a href="#" class="btn-1"><ion-icon name="sparkles-outline"></ion-icon>&nbsp;Tu ESFUERZO diario construye el ÉXITO de todos!&nbsp;<ion-icon name="sparkles-outline"></ion-icon></a>
+            </div>
+            <div class="header-img-a">
+                <img src="images/trabajador.jpg" alt="imagen derecha">
+            </div>
+        </div>
+    </header>
+
+    <!--Información-->
+        <section class="info-aboutus-wrapper" id="Conoce">
+            <div class="info-aboutus-circle-decor-izq"></div>
+            <div class="info-aboutus-circle-decor-der"></div>
+    <div class="info-aboutus-content">
+        <div class="info-aboutus-text-block">
+        <h2 class="info-aboutus-title">AHORA ES MÁS FACIL!</h2>
+        <p class="info-aboutus-paragraph">
+            Consideramos fundamental la gestión de manera eficiente de los aspectos clave del negocio, por lo que esta herramienta no solo te facilitará
+            el trabajo, sino que tambien asegurará que tengas un mayor control y organización de tus operaciones.
+        </p>
+        </div>
+        <div class="info-aboutus-image image-1"></div>
+
+        <div class="info-aboutus-section">
+        <div class="info-aboutus-image image-2"></div>
+        <div class="info-aboutus-paragraph">
+            <p>
+            A través de este medio podrás administrar contratos con clientes, llevar un registro claro de los pagos realizados, generar reportes generales 
+            para análisis y seguimiento de la disponibilidad de espacios.<br>
+            Todo esto nos ayuda a ofrecer un servicio más ágil, transparente y profesional, manteniendo una operación ordenada y enfocada en 
+            el crecimiento.
+            </p>
+        </div>
+        </div>
+
+        <div class="info-aboutus-section">
+        <div class="info-aboutus-paragraph">
+            <h2 class="info-aboutus-title">+ Optimización</h2>
+            <p>
+            <ion-icon name="radio-button-on-outline"></ion-icon>&nbsp;Información centralizada a una sola plataforma lo que corrige errores de manejo de datos.<br>
+            <ion-icon name="radio-button-on-outline"></ion-icon>&nbsp;Planeación de estrategias más efectivas gracias al seguimiento de tu actividad para asi mantener nuestra competitividad en el mercado.
+            </p>
+        </div>
+        <div class="info-aboutus-image image-3"></div>
+        </div>
+    </div>
+    </section>
+
+    <section class="info-whyus-wrapper">
+    <h2 class="info-whyus-title">¿Por qué Nosotros?</h2>
+    <div class="info-whyus-features">
+        <div class="info-whyus-feature">
+        <div class="info-feature-icon icon-1"></div>
+        <h3 class="info-feature-title">Gran Alcance</h3>
+        <p class="info-feature-description">Contamos con ALCANCE en la mayoria de la CMDX</p>
+        </div>
+        <div class="info-whyus-feature">
+        <div class="info-feature-icon icon-2"></div>
+        <h3 class="info-feature-title">Mejor Calidad</h3>
+        <p class="info-feature-description">Estamos enfocados en CALIDAD más que en cantidad</p>
+        </div>
+        <div class="info-whyus-feature">
+        <div class="info-feature-icon icon-3"></div>
+        <h3 class="info-feature-title">Mejores Ofertas</h3>
+        <p class="info-feature-description">Calidad/Precio en nuestros servicios</p>
+        </div>
+        <div class="info-whyus-feature">
+        <div class="info-feature-icon icon-4"></div>
+        <h3 class="info-feature-title">Abiertos todo el año</h3>
+        <p class="info-feature-description">Siempre dispuestos al cliente</p>
+        </div>
+    </div>
+    </section>
+      
+        <footer class="footer">
+            <div class="footer-content container">
+                <div class="link">
+                    <h3>Redes Sociales</h3>
+                    <ul>
+                        <li><a href="https://www.facebook.com/selfstorageslp/">Facebook</a></li>
+                        <li><a href="https://www.instagram.com/access_self_storage/">Instagram</a></li>
+                        <li><a href="https://www.linkedin.com/company/u-storage-m-xico/">Linkedin</a></li>
+                        <li><a href="https://www.tiktok.com/discover/self-storage?lang=es">Tiktok</a></li>
+                    </ul>
+                </div>
+                <div class="link">
+                    <h3>Links de Interés</h3>
+                    <ul>
+                        <li><a href="https://www.google.com.mx/maps/">Buscar por Ubicación</a></li>
+                        <li><a href="https://u-storage.com.mx/formatos/Entrevista_de_Entrada_U-Storage_2025.pdf">Requisitos de Contratación</a></li>
+                        <li><a href="Informacion.html">Protocolos de Seguridad</a></li>
+                        <li><a href="#contactos">Ayuda</a></li>
+                    </ul>
+                </div>
+                <div class="link">
+                    <h3>Contactanos</h3>
+                    <ul>
+                        <li><a href="#">800 966 0001</a></li>
+                        <li><a href="#">Selfstorage@almacen.com</a></li>
+                        <li><a href="https://www.google.com.mx/maps/search/U-Storage/@19.4025289,-99.0769532,13z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MDUwNy4wIKXMDSoASAFQAw%3D%3D">Sucursales</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div>
+                <br>
+                  <p>&copy; 2025 Self Storage. Todos los derechos reservados.</p>
+                  <p>Ubicación: Ciudad de México </p>
+            </div>
+        </footer>
+
+
+    
+     <script src="script.js"></script>  
+     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
